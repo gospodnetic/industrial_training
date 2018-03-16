@@ -118,7 +118,7 @@ Your goal is to create a more intricate system of nodes:
       )
       ```
 
-7. NOW! you have a service defined in you package and you can attempt to _Build_ the code to generate the service:
+7. NOW! you have a service defined in your package and you can attempt to _Build_ the code to generate the service:
    
    ```
    catkin build
