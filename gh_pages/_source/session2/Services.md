@@ -129,7 +129,7 @@ Your goal is to create a more intricate system of nodes:
 
 1. Edit `vision_node.cpp`; remember that the [ros wiki](http://wiki.ros.org/ROS/Tutorials/WritingServiceClient%28c%2B%2B%29) is a resource.
 
-2. Add the header for the service we just created
+2. Add the header for the service we just created (the header is generated automatically based on the .srv file and can be found in `~/catkin_ws/devel/include/myworkcell_core/`)
 
    ``` c++
     #include <myworkcell_core/LocalizePart.h>
