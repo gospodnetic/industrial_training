@@ -30,12 +30,12 @@ In previous exercises, we added a service with the following definition:
 So far we haven't used the request field, `base_frame`, for anything. In this exercise we'll use ROS parameters to set this field. You will need to:
 
 1. Add a private node handle to the main method of the `myworkcell_node` in addition to the normal one.
-1. Use the private node handle to load the parameter `base_frame` and store it in a local string object.
+2. Use the private node handle to load the parameter `base_frame` and store it in a local string object.
 
-   * If no parameter is provided, default to the parameter to `"world"`.
+   * If no parameter is provided, default the parameter to `"world"`.
 
-1. When making the service call to the `vision_node`, use this parameter to fill out the `request::base_frame` field.
-1. Add a `<param>` tag to your launch file to initialize the new value.
+3. When making the service call to the `vision_node`, use this parameter to fill out the `request::base_frame` field.
+4. Add a `<param>` tag to your launch file to initialize the new value.
 
 ## Scan-N-Plan Application: Guidance
 
@@ -50,6 +50,7 @@ So far we haven't used the request field, `base_frame`, for anything. In this ex
 3. Create a temporary string object, `std::string base_frame;`, and then use the private node handle's [API](http://docs.ros.org/indigo/api/roscpp/html/classros_1_1NodeHandle.html) to load the parameter `"base_frame"`.
 
    ``` c++
+   std::string base_frame;
    private_node_handle.param<std::string>("base_frame", base_frame, "world"); // parameter name, string object reference, default value
    ```
 
