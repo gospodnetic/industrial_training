@@ -31,9 +31,7 @@ Specifically, you will need to:
 
     1. You can install the debian packages: `sudo apt install ros-kinetic-universal-robot`
 
-        _This has not yet been released, but will work later..._
-
-    1. You can clone it from [GitHub](https://github.com/ros-industrial/universal_robot) to your catkin workspace:
+    2. You can clone it from [GitHub](https://github.com/ros-industrial/universal_robot) to your catkin workspace:
 
        ```
        cd ~/catkin_ws/src
