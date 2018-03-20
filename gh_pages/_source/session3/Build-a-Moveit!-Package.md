@@ -31,7 +31,7 @@ In this exercise, you will generate a MoveIt package for the UR5 workcell you bu
 
  1. Work your way through the tabs on the left from the top down.
 
-    1. Generate a self-(myworkcell_moveit_config/config/joint_names.yaml):collision matrix.
+    1. Generate a self-collision matrix.
     1. Add a fixed virtual base joint. e.g.
 
        ```

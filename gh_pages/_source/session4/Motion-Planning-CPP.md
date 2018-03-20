@@ -25,8 +25,8 @@ In this exercise, your goal is to modify the `myworkcell_core` node to:
 
        * Remember that we already added a dependency on the `tf` package in a previous exercise.
 
-
     1. In the `ScanNPlan` class's `start` method below the `if (!vision_client_.call(srv))` statement , use the response from the `LocalizePart` service to create a new `move_target` variable:
+
        ```c++
        geometry_msgs::Pose move_target = srv.response.pose;
        ```
@@ -36,10 +36,9 @@ In this exercise, your goal is to modify the `myworkcell_core` node to:
     1. The `MoveGroupInterface` is part of the `moveit_ros_planning_interface` package, so you’ll need to add this as a dependency to your `myworkcell_core` package. Modify your package's `CMakeLists.txt` (2 lines) and `package.xml` (2 lines) as in previous exercises.
 
     1. Add the appropriate "include" reference to allow use of the `MoveGroupInterface`:
-      
+
        ```c++
        #include <moveit/move_group_interface/move_group_interface.h>
-       ``` 
 
     1. Create a `moveit::planning_interface::MoveGroupInterface` object in the `ScanNPlan` class's `start()` method. It has a single constructor that takes the name of the planning group you defined when creating the workcell moveit package (“manipulator”).
 
@@ -73,9 +72,9 @@ In this exercise, your goal is to modify the `myworkcell_core` node to:
     ```
 
  1. More to explore...
-    * In RViz, add a "Marker" display of topic "/ar_pose_visual" to confirm that the final robot position matches the position published by `fake_ar_publisher`
+    * In RViz, click on the  "Add" button to add a new display. Select the "Marker" display and set "Marker Topic" to "/ar_pose_visual" to confirm that the final robot position matches the position published by `fake_ar_publisher`
     * Try repeating the motion planning sequence:
       1. Use the MoveIt rviz interface to move the arm back to the "allZeros" position
       1. Ctrl+C the `workcell.launch` file, then rerun
-    * Try updating the `workcell_node`'s `start` method to automatically move back to the `allZeros` position after moving to the AR_target position.  See [here](http://docs.ros.org/kinetic/api/moveit_ros_planning_interface/html/classmoveit_1_1planning__interface_1_1MoveGroup.html) for a list of `move_group`'s available methods.
+    * Try updating the `workcell_node`'s `start` method to automatically move back to the `allZeros` position after moving to the AR_target position.  See [here](http://docs.ros.org/kinetic/api/moveit_ros_planning_interface/html/classmoveit_1_1planning__interface_1_1MoveGroupInterface.html) for a list of `move_group`'s available methods.
     * Try moving to an "approach position" located a few inches away from the target position, prior to the final move-to-target.
