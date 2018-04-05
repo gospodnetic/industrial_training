@@ -4,7 +4,7 @@
 ## Kinect Sensor Example
 >This task will step you through the process of connecting to and displaying kinect data.
 
-Download the [PointCloud file](resources/table.pcd) and place the file in your home directory (~).
+Download the [PointCloud file](https://github.com/ros-industrial/industrial_training/blob/kinetic/gh_pages/_downloads/table.pcd) and place the file in your home directory (~).
 
 ## Launch Point Cloud Generating Nodes
 If using a virtual machine, or otherwise don't have access to hardware, you will have to play the data using the PointCloud file and pcl_ros package.
@@ -31,17 +31,18 @@ roslaunch openni_launch openni.launch
 rosrun rviz rviz
 ```
 
-## dd a Point Cloud
+## Add a Point Cloud
 Add a **PointCloud2** display item and set the desired topic.
 
 1. Select **Add** at the bottom of the Displays panel
 1. Select **PointCloud2**
 1. Expand **PointCloud2** in the display tree, and select a topic from topic drop down.
-#### Hint:
+#### Hints:
 * If using PointCloud file, the desired topic is */orig_cloud_pcd*.
+* Make sure you have installed `ros-kinetic-pcl-ros` to be able to use the pcl_ros command
 
 ## Experiment with PCL
-   Next step we will experiment with various command line tool provided by PCL for process point cloud data. Now there are over 140 command line tools available so only a few will be used as part of this exercise. The intent is to get you familiar with the capabilities of PCL without writing any code, but these command line tools are a great place to start when writing your own.
+   Next step we will experiment with various command line tool provided by PCL for process point cloud data (make sure to have installed the `pcl-tools` package using `apt-get`). Now there are over 140 command line tools available so only a few will be used as part of this exercise. The intent is to get you familiar with the capabilities of PCL without writing any code, but these command line tools are a great place to start when writing your own.
 
 ### Extracting the table surface from point cloud using the pcl_sac_segmentation_plane.
 

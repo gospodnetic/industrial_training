@@ -152,15 +152,19 @@ With the Descartes node completed, we now want to invoke its logic by adding a n
     ROS_INFO("Done");
     ```
 
+ 1. Compile the code with `catkin build`
+
 ### Test Full Application
 
- 1. Create a new `setup.launch` file (in `workcell_support` package) that brings up everything except your workcell_node:
+ 1. Create a new `setup.launch` file (in `myworkcell_support` package) that brings up everything except your workcell_node:
 
     ``` xml
-    <include file="$(find myworkcell_moveit_config)/launch/myworkcell_planning_execution.launch"/>
-    <node name="fake_ar_publisher" pkg="fake_ar_publisher" type="fake_ar_publisher_node" />
-    <node name="vision_node" type="vision_node" pkg="myworkcell_core" output="screen"/>
-    <node name="descartes_node" type="descartes_node" pkg="myworkcell_core" output="screen"/>
+    <launch>
+      <include file="$(find myworkcell_moveit_config)/launch/myworkcell_planning_execution.launch"/>
+      <node name="fake_ar_publisher" pkg="fake_ar_publisher" type="fake_ar_publisher_node" />
+      <node name="vision_node" type="vision_node" pkg="myworkcell_core" output="screen"/>
+      <node name="descartes_node" type="descartes_node" pkg="myworkcell_core" output="screen"/>
+      </launch>
     ```
 
  1. Run the new setup file, then your main workcell node:

@@ -24,7 +24,6 @@ ur5_pick_and_place.launch   : Runs your pick and place node.
 ```
 
 ## Look into the config directory
-
 ```
 ur5/
  - pick_and_place_parameters.yaml    : List of parameters read by the pick and place node.
@@ -35,7 +34,6 @@ ur5/
 ```
 
 ## Look into the src directory
-
 ```
 nodes:
  - pick_and_place_node.cpp : Main application thread. Contains all necessary headers and function calls.
