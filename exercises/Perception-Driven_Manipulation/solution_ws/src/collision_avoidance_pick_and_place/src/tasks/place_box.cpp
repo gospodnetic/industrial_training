@@ -46,7 +46,7 @@ void collision_avoidance_pick_and_place::PickAndPlace::place_box(std::vector<geo
   	}
 
   	// create motion plan
-    moveit::planning_interface::MoveGroup::Plan plan;
+    moveit::planning_interface::MoveGroupInterface::Plan plan;
     success = create_motion_plan(place_poses[i],robot_state,plan) && move_group_ptr->execute(plan);
 
     if(success)

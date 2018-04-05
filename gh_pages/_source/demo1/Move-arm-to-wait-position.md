@@ -1,5 +1,5 @@
 # Move Arm to Wait Position
->The '''MoveGroup''' class in '''moveit''' allows us to move the robot in various ways.  With '''MoveGroup''' it is possible to move to a desired joint position, cartesian goal or a predefined pose created with the Setup Assistant.  In this exercise, we will move the robot to a predefined joint pose.
+>The '''MoveGroupInterface''' class in '''moveit''' allows us to move the robot in various ways.  With '''MoveGroupInterface''' it is possible to move to a desired joint position, cartesian goal or a predefined pose created with the Setup Assistant.  In this exercise, we will move the robot to a predefined joint pose.
 
 ## Locate Function
 
@@ -49,6 +49,6 @@ roslaunch collision_avoidance_pick_and_place ur5_pick_and_place.launch
 
 ## API References
 
-[setNamedTarget()](http://docs.ros.org/hydro/api/moveit_ros_planning_interface/html/classmoveit_1_1planning__interface_1_1MoveGroup.html#af6850334bb1b4f12e457257550d5f92c)
+[setNamedTarget()](http://docs.ros.org/kinetic/api/moveit_ros_planning_interface/html/classmoveit_1_1planning__interface_1_1MoveGroupInterface.html#a5262ff42a454b499d3608b384957a5e4)
 
-[move()](http://docs.ros.org/hydro/api/moveit_ros_planning_interface/html/classmoveit_1_1planning__interface_1_1MoveGroup.html#a4c63625e2e9eb5c342d1fc6732bd8cf7)
+[move()](http://docs.ros.org/kinetic/api/moveit_ros_planning_interface/html/classmoveit_1_1planning__interface_1_1MoveGroupInterface.html#a3513c41b0c73400fc6713b25bc6b1637)
