@@ -2,7 +2,7 @@
 
 /* MOVING ARM TO WAIT POSITION
   Goal:
-    - Use the 'move_group' interface to move the robot to the 'wait' target.
+    - Use the 'move_group_interface' to move the robot to the 'wait' target.
     - Observe how we verify that the move was completed
 
   Hints:
